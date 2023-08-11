@@ -5,22 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
-    TextView linksignup;
+    Button btnCreate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        linksignup = findViewById(R.id.linksignup);
+        setContentView(R.layout.activity_sign_up);
+        btnCreate = findViewById(R.id.btnCreate);
 
-        linksignup.setOnClickListener(new View.OnClickListener() {
+        btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),SignUp.class);
+                Intent i = new Intent(getApplicationContext(),RegisterScreen.class);
                 startActivity(i);
             }
         });
